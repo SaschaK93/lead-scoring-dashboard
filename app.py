@@ -188,26 +188,26 @@ with right_col:
     if st.button("Save Feedback"):
         if actual_outcome == "Not known yet":
             st.warning("Please select Yes or No before saving feedback.")
-    else:
-        feedback_row = input_data.copy()
-        feedback_row["Lead Score"] = score
-        feedback_row["Prediction"] = prediction
-        feedback_row["Category"] = category
-        feedback_row["Actual Converted"] = 1 if actual_outcome == "Yes" else 0
+        else:
+            feedback_row = input_data.copy()
+            feedback_row["Lead Score"] = score
+            feedback_row["Prediction"] = prediction
+            feedback_row["Category"] = category
+            feedback_row["Actual Converted"] = 1 if actual_outcome == "Yes" else 0
 
-        feedback_df = pd.DataFrame([feedback_row])
+            feedback_df = pd.DataFrame([feedback_row])
 
-        feedback_file = "feedback_data.csv"
+            feedback_file = "feedback_data.csv"
 
-        try:
-            existing_feedback = pd.read_csv(feedback_file)
-            feedback_df = pd.concat(
-                [existing_feedback, feedback_df],
-                ignore_index=True
+            try:
+                existing_feedback = pd.read_csv(feedback_file)
+                feedback_df = pd.concat(
+                    [existing_feedback, feedback_df],
+                    ignore_index=True
             )
-        except FileNotFoundError:
-            pass
+            except FileNotFoundError:
+                pass
 
-        feedback_df.to_csv(feedback_file, index=False)
+            feedback_df.to_csv(feedback_file, index=False)
 
-        st.success("Feedback saved successfully!")
+            st.success("Feedback saved successfully!")
