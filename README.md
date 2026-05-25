@@ -1,3 +1,6 @@
+<img width="1814" height="886" alt="image" src="https://github.com/user-attachments/assets/3175475e-30c1-4ea8-b6fd-0209f9b1ed41" />
+
+
 # 🎯 Explainable AI Lead Scoring Dashboard
 
 An end-to-end machine learning project that predicts lead conversion probability and provides explainable AI insights for business decision-making.
@@ -103,7 +106,7 @@ The goal of this project is to move beyond simple ML prediction and build a smal
 
 ## 🌐 Live Demo
 
-(Coming soon)
+https://lead-scoring-dashboard-vh8byhndruuhyvuqkwkjrq.streamlit.app/
 
 ```
 Streamlit deployment link here
